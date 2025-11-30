@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة عقود الاعتماد الأكاديمي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23006341'/%3E%3Cpath d='M30 50 L45 65 L70 35' stroke='white' stroke-width='5' fill='none'/%3E%3C/svg%3E" alt="شعار" class="logo">
+                <div class="header-text">
+                    <h1>نظام إدارة عقود الاعتماد الأكاديمي</h1>
+                    <p>المركز الوطني للتقويم والاعتماد الأكاديمي</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>إجمالي العقود</h3>
+                <p class="number">445</p>
+                <span class="label">عقد تحت الإجراء</span>
+            </div>
+            <div class="summary-card">
+                <h3>الجامعات</h3>
+                <p class="number">35</p>
+                <span class="label">جامعة وكلية</span>
+            </div>
+            <div class="summary-card">
+                <h3>التخصصات</h3>
+                <p class="number">285</p>
+                <span class="label">برنامج أكاديمي</span>
+            </div>
+            <div class="summary-card">
+                <h3>الإدارات</h3>
+                <p class="number">5</p>
+                <span class="label">إدارة مختصة</span>
+            </div>
+        </div>
+
+        <nav class="tabs">
+            <button class="tab-button active" onclick="showTab('contracts')">حالة العقود</button>
+            <button class="tab-button" onclick="showTab('universities')">الجامعات</button>
+            <button class="tab-button" onclick="showTab('specializations')">التخصصات</button>
+            <button class="tab-button" onclick="showTab('dates')">التواريخ</button>
+            <button class="tab-button" onclick="showTab('departments')">الإدارات</button>
+            <button class="tab-button" onclick="showTab('allContracts')">جميع العقود</button>
+        </nav>
+
+        <div id="contracts" class="tab-content active">
+            <h2>توزيع العقود حسب حالتها</h2>
+            
+            <div class="status-section">
+                <div class="status-header expired">
+                    <h3>عقود منتهية أو قريبة من الانتهاء (2024)</h3>
+                    <span class="count">34 عقد</span>
+                </div>
+                <div class="contracts-grid">
+                    <div class="contract-card" onclick="showContractDetails('الاقتصاد', 'الجامعة الإسلامية', 'ماجستير')">
+                        <h4>الاقتصاد</h4>
+                        <p><strong>الجامعة:</strong> الجامعة الإسلامية</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>الإعلام والاتصال</h4>
+                        <p><strong>الجامعة:</strong> الجامعة الإسلامية</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>أصول التربية الإسلامية</h4>
+                        <p><strong>الجامعة:</strong> الجامعة الإسلامية</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>تقنية المعلومات</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>علوم الحاسبات</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>نظم المعلومات</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>أمراض التخاطب والبلع</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>إدارة المكاتب</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> دبلوم</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>التسويق</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> دبلوم</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>المحاسبة</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> دبلوم</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>علم المعلومات</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>تصميم الأزياء والنسيج</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>علوم الرياضة والنشاط البدني</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأميرة نورة بنت عبد الرحمن</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 07/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 06/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>علوم المختبرات</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العلاج الطبيعي</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>علوم التمريض</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>الأشعة والتصوير الطبي</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>تقنية الأجهزة الطبية</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العلاج الطبيعي لأمراض الأعصاب</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العلاج الطبيعي لأمراض الأطفال</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العلوم في الرياضيات</h4>
+                        <p><strong>الجامعة:</strong> جامعة الأمير سطام بن عبد العزيز</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 10/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 09/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>إدارة الاعمال</h4>
+                        <p><strong>الجامعة:</strong> جامعة الفيصل</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 04/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 03/06/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>الفلسفة في علوم التربة</h4>
+                        <p><strong>الجامعة:</strong> جامعة الملك سعود</p>
+                        <p><strong>الدرجة:</strong> دكتوراه</p>
+                        <p><strong>بداية العقد:</strong> 05/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 04/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العقيدة والمذاهب المعاصرة</h4>
+                        <p><strong>الجامعة:</strong> جامعة الإمام محمد بن سعود الإسلامية</p>
+                        <p><strong>الدرجة:</strong> دكتوراه</p>
+                        <p><strong>بداية العقد:</strong> 05/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 04/06/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العقيدة والمذاهب المعاصرة</h4>
+                        <p><strong>الجامعة:</strong> جامعة الإمام محمد بن سعود الإسلامية</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 05/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 04/06/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>التربية في رياض الأطفال</h4>
+                        <p><strong>الجامعة:</strong> جامعة الإمام عبد الرحمن بن فيصل</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 20/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 03/06/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>هندسة الحاسب</h4>
+                        <p><strong>الجامعة:</strong> جامعة القصيم</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 09/10/2024</p>
+                        <p><strong>نهاية العقد:</strong> 08/10/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>تقنية المعلومات</h4>
+                        <p><strong>الجامعة:</strong> جامعة القصيم</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 09/10/2024</p>
+                        <p><strong>نهاية العقد:</strong> 08/10/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>علوم الحاسب</h4>
+                        <p><strong>الجامعة:</strong> جامعة القصيم</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 09/10/2024</p>
+                        <p><strong>نهاية العقد:</strong> 08/10/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>الأمن السيبراني</h4>
+                        <p><strong>الجامعة:</strong> جامعة القصيم</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 09/10/2024</p>
+                        <p><strong>نهاية العقد:</strong> 08/10/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>تقنية المعلومات</h4>
+                        <p><strong>الجامعة:</strong> جامعة القصيم</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 09/10/2024</p>
+                        <p><strong>نهاية العقد:</strong> 08/10/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>التصميم الداخلي</h4>
+                        <p><strong>الجامعة:</strong> كليات الأصالة</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 02/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 01/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>العمارة</h4>
+                        <p><strong>الجامعة:</strong> كليات الأصالة</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 02/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 01/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>الأعمال - المالية</h4>
+                        <p><strong>الجامعة:</strong> كليات الأصالة</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 02/03/2024</p>
+                        <p><strong>نهاية العقد:</strong> 01/03/2025</p>
+                        <span class="badge danger">ينتهي قريباً</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div class="status-header warning">
+                    <h3>عقود تنتهي في النصف الأول من 2025 (يناير - يونيو)</h3>
+                    <span class="count">58 عقد</span>
+                </div>
+                <div class="contracts-grid">
+                    <div class="contract-card">
+                        <h4>العلوم في إدارة هندسة التشييد</h4>
+                        <p><strong>الجامعة:</strong> جامعة الإمام عبد الرحمن بن فيصل</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 20/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 31/01/2026</p>
+                        <span class="badge warning">متبقي سنة</span>
+                    </div>
+                    <div class="contract-card">
+                        <h4>التصميم الصناعي</h4>
+                        <p><strong>الجامعة:</strong> جامعة الإمام عبد الرحمن بن فيصل</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 20/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 31/01/2026</p>
+                        <span class="badge warning">متبقي سنة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div class="status-header info">
+                    <h3>عقود تنتهي في النصف الثاني من 2025 (يوليو - ديسمبر)</h3>
+                    <span class="count">12 عقد</span>
+                </div>
+                <div class="contracts-grid">
+                    <div class="contract-card">
+                        <h4>الصحة العامة - تجديد اعتماد</h4>
+                        <p><strong>الجامعة:</strong> جامعة القصيم</p>
+                        <p><strong>الدرجة:</strong> بكالوريوس</p>
+                        <p><strong>بداية العقد:</strong> 09/10/2024</p>
+                        <p><strong>نهاية العقد:</strong> 08/10/2025</p>
+                        <span class="badge info">متبقي عام</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <div class="status-header success">
+                    <h3>عقود تنتهي في 2026 أو لاحقاً</h3>
+                    <span class="count">341 عقد</span>
+                </div>
+                <div class="contracts-grid">
+                    <div class="contract-card">
+                        <h4>العلوم في إدارة هندسة التشييد</h4>
+                        <p><strong>الجامعة:</strong> جامعة الإمام عبد الرحمن بن فيصل</p>
+                        <p><strong>الدرجة:</strong> ماجستير</p>
+                        <p><strong>بداية العقد:</strong> 20/06/2024</p>
+                        <p><strong>نهاية العقد:</strong> 31/01/2026</p>
+                        <span class="badge success">سارٍ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="universities" class="tab-content">
+            <h2>تفاصيل الجامعات والكليات</h2>
+            
+            <div class="search-box">
+                <input type="text" id="universitySearch" placeholder="ابحث عن جامعة..." onkeyup="searchUniversities()">
+            </div>
+
+            <div class="university-stats">
+                <h3>توزيع العقود حسب الجامعات</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>جامعة الملك عبد العزيز</h4>
+                        <p class="stat-number">89</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الإمام عبد الرحمن بن فيصل</h4>
+                        <p class="stat-number">38</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الملك سعود</h4>
+                        <p class="stat-number">37</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الملك فيصل</h4>
+                        <p class="stat-number">25</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الأميرة نورة بنت عبد الرحمن</h4>
+                        <p class="stat-number">20</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة جدة</h4>
+                        <p class="stat-number">20</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة طيبة</h4>
+                        <p class="stat-number">19</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة حفر الباطن</h4>
+                        <p class="stat-number">19</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الطائف</h4>
+                        <p class="stat-number">18</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة جازان</h4>
+                        <p class="stat-number">16</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة القصيم</h4>
+                        <p class="stat-number">14</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة أم القرى</h4>
+                        <p class="stat-number">11</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الباحة</h4>
+                        <p class="stat-number">8</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة حائل</h4>
+                        <p class="stat-number">7</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة المجمعة</h4>
+                        <p class="stat-number">7</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الجوف</h4>
+                        <p class="stat-number">6</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة نجران</h4>
+                        <p class="stat-number">6</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة تبوك</h4>
+                        <p class="stat-number">3</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة بيشة</h4>
+                        <p class="stat-number">3</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الأعمال والتكنولوجيا</h4>
+                        <p class="stat-number">3</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>الجامعة الإسلامية</h4>
+                        <p class="stat-number">3</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الملك سعود بن عبد العزيز للعلوم الصحية</h4>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة شقراء</h4>
+                        <p class="stat-number">6</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة المعرفة</h4>
+                        <p class="stat-number">4</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة عفت</h4>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>كليات الأصالة</h4>
+                        <p class="stat-number">4</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>كليات بريدة الأهلية</h4>
+                        <p class="stat-number">4</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة اليمامة</h4>
+                        <p class="stat-number">1</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الأمير سطام بن عبد العزيز</h4>
+                        <p class="stat-number">10</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>كليات عنيزة</h4>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة الإمام محمد بن سعود الإسلامية</h4>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>كلية جدة العالمية</h4>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>كلية الأمير سلطان العسكرية للعلوم الصحية</h4>
+                        <p class="stat-number">2</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>جامعة سليمان الراجحي</h4>
+                        <p class="stat-number">1</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>كلية الريان الأهلية</h4>
+                        <p class="stat-number">1</p>
+                        <p class="stat-label">عقد</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="university-details">
+                <h3>تفاصيل كل جامعة</h3>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الملك عبد العزيز (89 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 89 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 38 عقد</li>
+                                    <li>ماجستير: 43 عقد</li>
+                                    <li>ماجستير تنفيذي: 4 عقود</li>
+                                    <li>دكتوراه: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 15 عقد</li>
+                                    <li>إدارة برامج العلوم الصحية: 16 عقد</li>
+                                    <li>إدارة برامج التخصصات العلمية: 27 عقد</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 7 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 24 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الملك عبد العزيز')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الإمام عبد الرحمن بن فيصل (38 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 38 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 23 عقد</li>
+                                    <li>ماجستير: 15 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 10 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 7 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 3 عقود</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 6 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 12 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الإمام عبد الرحمن بن فيصل')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الملك سعود (37 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 37 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 14 عقد</li>
+                                    <li>ماجستير: 19 عقد</li>
+                                    <li>دكتوراه: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 3 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 18 عقد</li>
+                                    <li>إدارة برامج التخصصات العلمية: 4 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 12 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الملك سعود')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الملك فيصل (25 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 25 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 9 عقود</li>
+                                    <li>ماجستير: 16 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 1 عقد</li>
+                                    <li>إدارة برامج التخصصات العلمية: 10 عقود</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 12 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الملك فيصل')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الأميرة نورة بنت عبد الرحمن (20 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 20 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 11 عقد</li>
+                                    <li>دبلوم: 7 عقود</li>
+                                    <li>ماجستير: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 4 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 15 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الأميرة نورة بنت عبد الرحمن')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة جدة (20 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 20 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 20 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 11 عقد</li>
+                                    <li>إدارة برامج العلوم الصحية: 3 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 4 عقود</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة جدة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة طيبة (19 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 19 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 15 عقد</li>
+                                    <li>ماجستير: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 6 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 6 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 4 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 3 عقود</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة طيبة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة حفر الباطن (19 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 19 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 16 عقد</li>
+                                    <li>ماجستير: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 3 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 4 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 4 عقود</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 3 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 5 عقود</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة حفر الباطن')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الطائف (18 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 18 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 13 عقد</li>
+                                    <li>ماجستير: 5 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 3 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 5 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 4 عقود</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 4 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الطائف')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة جازان (16 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 16 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 12 عقد</li>
+                                    <li>ماجستير: 3 عقود</li>
+                                    <li>ماجستير تنفيذي: 1 عقد</li>
+                                    <li>دكتوراه: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 13 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة جازان')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة القصيم (14 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 14 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 8 عقود</li>
+                                    <li>ماجستير: 3 عقود</li>
+                                    <li>دكتوراه: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 6 عقود</li>
+                                    <li>إدارة برامج العلوم الصحية: 3 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة القصيم')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة أم القرى (11 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 11 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 10 عقود</li>
+                                    <li>دكتوراه: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 6 عقود</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 5 عقود</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة أم القرى')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الأمير سطام بن عبد العزيز (10 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 10 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 8 عقود</li>
+                                    <li>ماجستير: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 9 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الأمير سطام بن عبد العزيز')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الباحة (8 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 8 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 5 عقود</li>
+                                    <li>ماجستير: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                    <li>إدارة برامج التخصصات العلمية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الباحة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة المجمعة (7 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 7 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 7 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 4 عقود</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة المجمعة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة حائل (7 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 7 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 7 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الصحية: 1 عقد</li>
+                                    <li>إدارة برامج التخصصات العلمية: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة حائل')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الجوف (6 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 6 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 2 عقدان</li>
+                                    <li>ماجستير: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                    <li>إدارة برامج التخصصات العلمية: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الجوف')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة شقراء (6 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 6 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 6 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الصحية: 3 عقود</li>
+                                    <li>إدارة برامج التخصصات العلمية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة شقراء')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة نجران (6 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 6 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 6 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                    <li>إدارة برامج التخصصات العلمية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة نجران')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كليات الأصالة (4 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 4 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كليات الأصالة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة المعرفة (4 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 4 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة المعرفة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كليات بريدة الأهلية (4 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 4 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 4 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كليات بريدة الأهلية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>الجامعة الإسلامية (3 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 3 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 3 عقود</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('الجامعة الإسلامية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الأعمال والتكنولوجيا (3 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 3 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الأعمال والتكنولوجيا')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة بيشة (3 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 3 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج التخصصات العلمية: 2 عقدان</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة بيشة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة تبوك (3 عقود)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 3 عقود</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 3 عقود</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة تبوك')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الملك سعود بن عبد العزيز للعلوم الصحية (2 عقدان)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 2 عقدان</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الملك سعود بن عبد العزيز للعلوم الصحية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الإمام محمد بن سعود الإسلامية (2 عقدان)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 2 عقدان</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 1 عقد</li>
+                                    <li>دكتوراه: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإسلامية والعربية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الإمام محمد بن سعود الإسلامية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة عفت (2 عقدان)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 2 عقدان</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة عفت')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كليات عنيزة (2 عقدان)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 2 عقدان</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كليات عنيزة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كلية جدة العالمية (2 عقدان)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 2 عقدان</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كلية جدة العالمية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كلية الأمير سلطان العسكرية للعلوم الصحية (2 عقدان)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 2 عقدان</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 2 عقدان</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 2 عقدان</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كلية الأمير سلطان العسكرية للعلوم الصحية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة اليمامة (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الهندسية وعلوم الحاسب: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة اليمامة')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة سليمان الراجحي (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة سليمان الراجحي')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كلية الريان الأهلية (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الصحية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كلية الريان الأهلية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كلية الملك فهد الأمنية (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كلية الملك فهد الأمنية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>كلية الخليج للعلوم الإدارية والإنسانية (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('كلية الخليج للعلوم الإدارية والإنسانية')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الملك خالد (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>بكالوريوس: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الملك خالد')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <h4>جامعة الفيصل (1 عقد)</h4>
+                            <span class="accordion-icon">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="university-info">
+                                <p><strong>إجمالي العقود:</strong> 1 عقد</p>
+                                <p><strong>توزيع الدرجات العلمية:</strong></p>
+                                <ul>
+                                    <li>ماجستير: 1 عقد</li>
+                                </ul>
+                                <p><strong>الإدارات المختصة:</strong></p>
+                                <ul>
+                                    <li>إدارة برامج العلوم الإنسانية والتربوية: 1 عقد</li>
+                                </ul>
+                                
+                                <button class="btn-primary" onclick="showUniversityContracts('جامعة الفيصل')">عرض جميع العقود</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="specializations" class="tab-content">
+            <h2>التخصصات الأكاديمية</h2>
+            
+            <div class="search-box">
+                <input type="text" id="specializationSearch" placeholder="ابحث عن تخصص..." onkeyup="searchSpecializations()">
+            </div>
+
+            <div class="specialization-categories">
+                <div class="category-card" onclick="showSpecializationDetails('engineering')">
+                    <div class="category-icon">🔧</div>
+                    <h3>التخصصات الهندسية وعلوم الحاسب</h3>
+                    <p class="category-count">72 عقد</p>
+                    <ul class="category-list">
+                        <li>علوم الحاسب والذكاء الاصطناعي</li>
+                        <li>الهندسة المعمارية والتصميم</li>
+                        <li>هندسة البرمجيات ونظم المعلومات</li>
+                        <li>الأمن السيبراني</li>
+                    </ul>
+                </div>
+
+                <div class="category-card" onclick="showSpecializationDetails('health')">
+                    <div class="category-icon">🏥</div>
+                    <h3>التخصصات الصحية</h3>
+                    <p class="category-count">90 عقد</p>
+                    <ul class="category-list">
+                        <li>الطب والجراحة</li>
+                        <li>طب الأسنان</li>
+                        <li>التمريض والعلوم الصحية</li>
+                        <li>الصيدلة والعلوم الصيدلانية</li>
+                    </ul>
+                </div>
+
+                <div class="category-card" onclick="showSpecializationDetails('humanities')">
+                    <div class="category-icon">📚</div>
+                    <h3>العلوم الإنسانية والتربوية</h3>
+                    <p class="category-count">175 عقد</p>
+                    <ul class="category-list">
+                        <li>إدارة الأعمال والمحاسبة</li>
+                        <li>التربية والمناهج</li>
+                        <li>علم النفس والخدمة الاجتماعية</li>
+                        <li>اللغات والترجمة</li>
+                    </ul>
+                </div>
+
+                <div class="category-card" onclick="showSpecializationDetails('islamic')">
+                    <div class="category-icon">🕌</div>
+                    <h3>العلوم الإسلامية والعربية</h3>
+                    <p class="category-count">44 عقد</p>
+                    <ul class="category-list">
+                        <li>الشريعة والفقه</li>
+                        <li>العقيدة والدراسات الإسلامية</li>
+                        <li>اللغة العربية وآدابها</li>
+                        <li>القانون والأنظمة</li>
+                    </ul>
+                </div>
+
+                <div class="category-card" onclick="showSpecializationDetails('science')">
+                    <div class="category-icon">🔬</div>
+                    <h3>التخصصات العلمية</h3>
+                    <p class="category-count">64 عقد</p>
+                    <ul class="category-list">
+                        <li>الكيمياء والفيزياء</li>
+                        <li>الأحياء والعلوم البيئية</li>
+                        <li>الرياضيات والإحصاء</li>
+                        <li>العلوم الزراعية والبيطرية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="specializationDetail" class="specialization-detail" style="display: none;">
+                <button onclick="closeSpecializationDetail()" class="btn-secondary">← العودة</button>
+                <div id="specializationContent"></div>
+            </div>
+        </div>
+
+        <div id="dates" class="tab-content">
+            <h2>البحث حسب التاريخ</h2>
+            
+            <div class="date-search-section">
+                <div class="date-input-group">
+                    <label for="searchDate">اختر تاريخاً للبحث:</label>
+                    <input type="date" id="searchDate" onchange="searchByDate()">
+                    <button onclick="searchByDate()" class="btn-primary">بحث</button>
+                </div>
+            </div>
+
+            <div id="dateResults" class="date-results"></div>
+
+            <div class="timeline-section">
+                <h3>الخط الزمني للعقود</h3>
+                
+                <div class="timeline-filter">
+                    <button onclick="filterTimeline('all')" class="filter-btn active">الكل</button>
+                    <button onclick="filterTimeline('start')" class="filter-btn">بداية العقود</button>
+                    <button onclick="filterTimeline('end')" class="filter-btn">نهاية العقود</button>
+                    <button onclick="filterTimeline('visit')" class="filter-btn">زيارات التحقق</button>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-year">
+                        <h4>2024</h4>
+                        <div class="timeline-events">
+                            <div class="timeline-event">
+                                <span class="event-date">07/03/2024</span>
+                                <span class="event-type badge info">بداية عقد</span>
+                                <p>3 عقود - الجامعة الإسلامية</p>
+                            </div>
+                            <div class="timeline-event">
+                                <span class="event-date">10/03/2024</span>
+                                <span class="event-type badge info">بداية عقد</span>
+                                <p>10 عقود - جامعة الأمير سطام بن عبد العزيز</p>
+                            </div>
+                            <div class="timeline-event">
+                                <span class="event-date">20/06/2024</span>
+                                <span class="event-type badge info">بداية عقد</span>
+                                <p>38 عقد - جامعة الإمام عبد الرحمن بن فيصل</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-year">
+                        <h4>2025</h4>
+                        <div class="timeline-events">
+                            <div class="timeline-event">
+                                <span class="event-date">06/03/2025</span>
+                                <span class="event-type badge danger">نهاية عقد</span>
+                                <p>13 عقد - جامعة الأميرة نورة، الجامعة الإسلامية</p>
+                            </div>
+                            <div class="timeline-event">
+                                <span class="event-date">09/03/2025</span>
+                                <span class="event-type badge danger">نهاية عقد</span>
+                                <p>10 عقود - جامعة الأمير سطام بن عبد العزيز</p>
+                            </div>
+                            <div class="timeline-event">
+                                <span class="event-date">08/10/2025</span>
+                                <span class="event-type badge danger">نهاية عقد</span>
+                                <p>7 عقود - جامعة القصيم</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-year">
+                        <h4>2026</h4>
+                        <div class="timeline-events">
+                            <div class="timeline-event">
+                                <span class="event-date">31/01/2026</span>
+                                <span class="event-type badge warning">نهاية عقد</span>
+                                <p>38 عقد - جامعة الإمام عبد الرحمن بن فيصل</p>
+                            </div>
+                            <div class="timeline-event">
+                                <span class="event-date">30/06/2026</span>
+                                <span class="event-type badge warning">نهاية عقد</span>
+                                <p>89 عقد - جامعة الملك عبد العزيز</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="departments" class="tab-content">
+            <h2>توزيع العقود على الإدارات المختصة</h2>
+            
+            <div class="departments-stats">
+                <div class="dept-card" onclick="showDepartmentDetails('humanities')">
+                    <div class="dept-header">
+                        <h3>إدارة برامج العلوم الإنسانية والتربوية</h3>
+                        <span class="dept-count">175 عقد</span>
+                    </div>
+                    <div class="dept-progress">
+                        <div class="progress-bar" style="width: 39.3%"></div>
+                    </div>
+                    <p class="dept-percentage">39.3% من إجمالي العقود</p>
+                </div>
+
+                <div class="dept-card" onclick="showDepartmentDetails('health')">
+                    <div class="dept-header">
+                        <h3>إدارة برامج العلوم الصحية</h3>
+                        <span class="dept-count">90 عقد</span>
+                    </div>
+                    <div class="dept-progress">
+                        <div class="progress-bar" style="width: 20.2%"></div>
+                    </div>
+                    <p class="dept-percentage">20.2% من إجمالي العقود</p>
+                </div>
+
+                <div class="dept-card" onclick="showDepartmentDetails('engineering')">
+                    <div class="dept-header">
+                        <h3>إدارة برامج العلوم الهندسية وعلوم الحاسب</h3>
+                        <span class="dept-count">72 عقد</span>
+                    </div>
+                    <div class="dept-progress">
+                        <div class="progress-bar" style="width: 16.2%"></div>
+                    </div>
+                    <p class="dept-percentage">16.2% من إجمالي العقود</p>
+                </div>
+
+                <div class="dept-card" onclick="showDepartmentDetails('science')">
+                    <div class="dept-header">
+                        <h3>إدارة برامج التخصصات العلمية</h3>
+                        <span class="dept-count">64 عقد</span>
+                    </div>
+                    <div class="dept-progress">
+                        <div class="progress-bar" style="width: 14.4%"></div>
+                    </div>
+                    <p class="dept-percentage">14.4% من إجمالي العقود</p>
+                </div>
+
+                <div class="dept-card" onclick="showDepartmentDetails('islamic')">
+                    <div class="dept-header">
+                        <h3>إدارة برامج العلوم الإسلامية والعربية</h3>
+                        <span class="dept-count">44 عقد</span>
+                    </div>
+                    <div class="dept-progress">
+                        <div class="progress-bar" style="width: 9.9%"></div>
+                    </div>
+                    <p class="dept-percentage">9.9% من إجمالي العقود</p>
+                </div>
+            </div>
+
+            <div id="departmentDetail" class="department-detail" style="display: none;">
+                <button onclick="closeDepartmentDetail()" class="btn-secondary">← العودة</button>
+                <div id="departmentContent"></div>
+            </div>
+        </div>
+
+        <div id="allContracts" class="tab-content">
+            <h2>جميع العقود (445 عقد)</h2>
+            
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label>الجامعة:</label>
+                    <select id="filterUniversity" onchange="applyFilters()">
+                        <option value="">الكل</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>الدرجة العلمية:</label>
+                    <select id="filterDegree" onchange="applyFilters()">
+                        <option value="">الكل</option>
+                        <option value="بكالوريوس">بكالوريوس</option>
+                        <option value="ماجستير">ماجستير</option>
+                        <option value="دكتوراه">دكتوراه</option>
+                        <option value="دبلوم">دبلوم</option>
+                        <option value="ماجستير تنفيذي">ماجستير تنفيذي</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>الإدارة المختصة:</label>
+                    <select id="filterDepartment" onchange="applyFilters()">
+                        <option value="">الكل</option>
+                        <option value="إدارة برامج العلوم الإنسانية والتربوية">العلوم الإنسانية والتربوية</option>
+                        <option value="إدارة برامج العلوم الهندسية وعلوم الحاسب">العلوم الهندسية وعلوم الحاسب</option>
+                        <option value="إدارة برامج العلوم الصحية">العلوم الصحية</option>
+                        <option value="إدارة برامج العلوم الإسلامية والعربية">العلوم الإسلامية والعربية</option>
+                        <option value="إدارة برامج التخصصات العلمية">التخصصات العلمية</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>نسبة الإنجاز:</label>
+                    <select id="filterProgress" onchange="applyFilters()">
+                        <option value="">الكل</option>
+                        <option value="0%">0% - عقود جديدة</option>
+                        <option value="5%">5% - اللقاء التعريفي</option>
+                        <option value="30%">30% - دراسة الوثائق</option>
+                        <option value="40%">40% - زيارة التحقق</option>
+                        <option value="90%">90% - زيارة المراجعين</option>
+                    </select>
+                </div>
+                <button onclick="resetFilters()" class="btn-secondary">إعادة تعيين</button>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="allContractsSearch" placeholder="ابحث عن برنامج، جامعة، أو تخصص..." onkeyup="searchAllContracts()">
+            </div>
+
+            <div class="table-container">
+                <table id="contractsTable" class="contracts-table">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">اسم البرنامج ▼</th>
+                            <th onclick="sortTable(1)">الجامعة / الكلية ▼</th>
+                            <th onclick="sortTable(2)">الدرجة العلمية ▼</th>
+                            <th onclick="sortTable(3)">بداية العقد ▼</th>
+                            <th onclick="sortTable(4)">نهاية العقد ▼</th>
+                            <th onclick="sortTable(5)">نسبة الإنجاز ▼</th>
+                            <th onclick="sortTable(6)">الإدارة المختصة ▼</th>
+                            <th>التفاصيل</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contractsTableBody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button onclick="previousPage()" id="prevBtn">السابق</button>
+                <span id="pageInfo">صفحة 1 من 45</span>
+                <button onclick="nextPage()" id="nextBtn">التالي</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 المركز الوطني للتقويم والاعتماد الأكاديمي - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <div id="contractModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
